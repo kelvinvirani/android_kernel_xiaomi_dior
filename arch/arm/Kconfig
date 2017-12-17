@@ -1486,7 +1486,6 @@ config PL310_ERRATA_769419
 	  on systems with an outer cache, the store buffer is drained
 	  explicitly.
 
-<<<<<<< HEAD
 config KSAPI
         tristate "KSAPI support (EXPERIMENTAL)"
 	depends on ARCH_MSM_SCORPION || ARCH_MSM_KRAIT
@@ -1498,7 +1497,7 @@ config KSAPI
           counter statistics. It can monitor the counter statistics for
           Scorpion processor supported hardware performance counters on a per
           thread basis or AXI counters on an overall system basis.
-=======
+	  
 config ARM_ERRATA_775420
        bool "ARM errata: A data cache maintenance operation which aborts, might lead to deadlock"
        depends on CPU_V7
@@ -1508,7 +1507,6 @@ config ARM_ERRATA_775420
 	 operation aborts with MMU exception, it might cause the processor
 	 to deadlock. This workaround puts DSB before executing ISB if
 	 an abort may occur on cache maintenance.
->>>>>>> v3.4.113
 
 endmenu
 

@@ -111,7 +111,11 @@ void mmc_cd_gpio_free(struct mmc_host *host)
 {
 	struct mmc_cd_gpio *cd = host->hotplug.handler_priv;
 
+<<<<<<< HEAD
 	if (!cd || !gpio_is_valid(cd->gpio))
+=======
+	if (!cd)
+>>>>>>> v3.4.113
 		return;
 
 	free_irq(host->hotplug.irq, host);

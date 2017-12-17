@@ -646,6 +646,7 @@ static inline int __zs_cpu_up(struct mapping_area *area)
 	return 0;
 }
 
+<<<<<<< HEAD:mm/zsmalloc.c
 static inline void __zs_cpu_down(struct mapping_area *area)
 {
 	if (area->vm)
@@ -749,6 +750,8 @@ out:
 
 #endif /* USE_PGTABLE_MAPPING */
 
+=======
+>>>>>>> v3.4.113:drivers/staging/zsmalloc/zsmalloc-main.c
 static int zs_cpu_notifier(struct notifier_block *nb, unsigned long action,
 				void *pcpu)
 {
@@ -838,6 +841,10 @@ struct zs_pool *zs_create_pool(gfp_t flags)
 	}
 
 	pool->flags = flags;
+<<<<<<< HEAD:mm/zsmalloc.c
+=======
+	pool->name = name;
+>>>>>>> v3.4.113:drivers/staging/zsmalloc/zsmalloc-main.c
 
 	return pool;
 }

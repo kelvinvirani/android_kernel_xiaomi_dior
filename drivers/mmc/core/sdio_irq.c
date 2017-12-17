@@ -119,6 +119,7 @@ static int sdio_irq_thread(void *_host)
 		ret = __mmc_claim_host(host, &host->sdio_irq_thread_abort);
 		if (ret)
 			break;
+<<<<<<< HEAD
 		ws = false;
 		/*
 		 * prevent suspend if it has started when scheduled;
@@ -130,6 +131,8 @@ static int sdio_irq_thread(void *_host)
 			pm_wakeup_event(&host->card->dev, 100);
 			ws = true;
 		}
+=======
+>>>>>>> v3.4.113
 		ret = process_sdio_pending_irqs(host);
 		host->sdio_irq_pending = false;
 		mmc_release_host(host);

@@ -440,14 +440,12 @@ setup_return(struct pt_regs *regs, struct k_sigaction *ka,
 		 */
 		thumb = handler & 1;
 
-<<<<<<< HEAD
 #if __LINUX_ARM_ARCH__ >= 7
 		/*
 		 * Clear the If-Then Thumb-2 execution state
 		 * ARM spec requires this to be all 000s in ARM mode
 		 * Snapdragon S4/Krait misbehaves on a Thumb=>ARM
 		 * signal transition without this.
-=======
 #if __LINUX_ARM_ARCH__ >= 6
 		/*
 		 * Clear the If-Then Thumb-2 execution state.  ARM spec
@@ -459,7 +457,6 @@ setup_return(struct pt_regs *regs, struct k_sigaction *ka,
 		 * capable CPU, which includes ARMv6T2.  However, we elect
 		 * to do this whenever we're on an ARMv6 or later CPU for
 		 * simplicity.
->>>>>>> v3.4.113
 		 */
 		cpsr &= ~PSR_IT_MASK;
 #endif
